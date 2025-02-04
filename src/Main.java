@@ -187,7 +187,7 @@ public class Main {
                 "такой степени умилительно, что даже",
                 "клеветники и человеконенавистники на время"
         };
-        System.out.println(strings);
+        System.out.println(Arrays.asList(strings));
 
         String longestFlatWord = Arrays.stream(strings)
                 .flatMap(s -> Arrays.stream(s.split(" ")))
