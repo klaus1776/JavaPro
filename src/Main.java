@@ -46,29 +46,23 @@ public class Main {
 
         System.out.println("Список без дубликатов с помощью distinct-а: " + distinctPersons);
 
-        // 2. Удаление из List-а всех дубликатов с помощью HashSet:
-        // Удаляем дубликаты с помощью HashSet
-        HashSet<String> uniquePersonsHash = new HashSet<>(persons);
-
-        // Преобразуем HashSet обратно в список
-        List<String> uniquePerson = new ArrayList<>(uniquePersonsHash);
-
-        System.out.println("Список без дубликатов с помощью HashSet-а: " + uniquePerson);
-
         //-------------------------------------------------------
         // Найти в списке целых чисел 3-е наибольшее число :
         System.out.println("-------------------------------------------------------");
         System.out.println("Найти в списке целых чисел 3-е наибольшее число");
         List<Integer> numbers = Arrays.asList(5, 2, 10, 9, 4, 3, 10, 1, 13);
         System.out.println(numbers);
-        Integer thirdLargest = numbers.stream()
+
+        Optional<Integer> thirdLargest = numbers.stream()
+                .distinct()
                 .sorted(Comparator.reverseOrder())
-                //.skip(2)
-                .findFirst()
-                .orElse(null);
+                .skip(2)
+                .findFirst();
 
-        System.out.println("Третье максимальное число: " + thirdLargest);
-
+        thirdLargest.ifPresentOrElse(
+                maxNum -> System.out.println("Третье максимальное число: " + maxNum),
+                () -> System.out.println("В списке не существует третего максимального числа")
+        );
 
         //-------------------------------------------------------
         // Имеется список объектов типа Сотрудник (имя, возраст, должность), необходимо получить список имен 3 самых старших сотрудников с должностью «Инженер», в порядке убывания возраста :
@@ -87,8 +81,8 @@ public class Main {
         List<String> employeerNames = employeers.stream()
                 .filter(employeer -> employeer.getPost() == Posts.ENGINEER)
                 .sorted(Comparator.comparing(Employee::getAge).reversed())
-                .map(Employee::getName)
                 .limit(3)
+                .map(Employee::getName)
                 .collect(Collectors.toList());
         employeerNames.forEach(System.out::println);
 
@@ -110,7 +104,7 @@ public class Main {
                 .filter(employeer -> employeer.getPost() == Posts.ENGINEER)
                 .mapToInt(Employee::getAge)
                 .average()
-                .orElse(0);
+                .getAsDouble();
 
         System.out.println("Средний возраст инженеров : " + averageAge);
 
@@ -128,12 +122,16 @@ public class Main {
         System.out.println("-------------------------------------------------------");
         System.out.println("Найти в списке целых чисел 3-е наибольшее \"уникальное\" число");
         System.out.println(numbers);
-        Integer thirdLargestUnic = numbers.stream()
+
+        Optional<Integer> thirdLargestUnic = numbers.stream()
                 .distinct()
                 .sorted(Comparator.reverseOrder())
                 .skip(2)
-                .findFirst()
-                .orElse(null);
+                .findFirst();
+
+        thirdLargestUnic.ifPresentOrElse(
+                maxNum -> System.out.println("Третье наибольшее уникальное число: " + maxNum),
+                () -> System.out.println("В списке не существует уникальное третье наибольшее число") );
 
         System.out.println("Третье максимальное уникальное число: " + thirdLargestUnic);
 
@@ -143,9 +141,9 @@ public class Main {
         System.out.println("Найдите в списке слов самое длинное");
         List<String> words = Arrays.asList("Перфекционизм", "Эвфемизм", "Коллаборация", "Экзистенциальный", "Трансценденция", "Шикарно");
         System.out.println(words);
+
         String longestWord = words.stream()
-                .max(Comparator.comparingInt(String::length))
-                .orElse(null);
+                .reduce("", (a, b) -> a.length() >= b.length() ? a : b);
         System.out.println("Самое длинное слово: " + longestWord);
 
 

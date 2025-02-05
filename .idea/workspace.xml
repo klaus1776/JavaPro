@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5ab62b3b-9aa4-4f21-bbb8-26177b510e45" name="Changes" comment="Реализовал задание 2 по стримам курса Java Pro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Box.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoxGen.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +51,7 @@
     "Application.BoxGen.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "version__002",
+    "git-widget-placeholder": "#1 on task__2",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "D:/Kolya/JAVA/Programming/JavaPro/JavaProTask2/src/Main.java"
   }
@@ -131,5 +129,19 @@
     <MESSAGE value="Добавил папку .idea в .gitignore" />
     <MESSAGE value="Реализовал задание 2 по стримам курса Java Pro" />
     <option name="LAST_COMMIT_MESSAGE" value="Реализовал задание 2 по стримам курса Java Pro" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>62</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
