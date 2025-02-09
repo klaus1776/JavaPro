@@ -2,9 +2,19 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CustomThreadPool customThreadPool = new CustomThreadPool(5);
+
+        for (int i = 0; i < 10; i++) {
+            customThreadPool.execute(() -> {
+                SleepThread.printStart();
+                SleepThread.sleepMs(3000L);
+                SleepThread.printStop();
+            });
+
+        }
+        //customThreadPool.shutdown();
+        customThreadPool.awaitTermination();
+        customThreadPool.shutdown();
 
      }
 }
