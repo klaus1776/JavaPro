@@ -2,9 +2,9 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        CustomThreadPool customThreadPool = new CustomThreadPool(5);
+        CustomThreadPool customThreadPool = new CustomThreadPool(4);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 8; i++) {
             customThreadPool.execute(() -> {
                 SleepThread.printStart();
                 SleepThread.sleepMs(3000L);
@@ -15,6 +15,5 @@ public class Main {
         //customThreadPool.shutdown();
         customThreadPool.awaitTermination();
         customThreadPool.shutdown();
-
      }
 }

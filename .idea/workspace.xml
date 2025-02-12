@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ab62b3b-9aa4-4f21-bbb8-26177b510e45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CustomThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SleepThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomThreadPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SleepThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SleepThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "klaus1776"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/klaus1776/JavaPro.git",
+    "accountId": "df3a44a6-6f78-417b-9e24-2dae3808392c"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -36,8 +48,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "task__3",
+    "git-widget-placeholder": "#2 on task__3",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "D:/Kolya/JAVA/Programming/JavaPro/JavaProTask2/src/Main.java"
   }

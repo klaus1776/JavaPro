@@ -3,7 +3,8 @@ public class SleepThread {
         try {
             Thread.sleep(ms);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            Thread.currentThread().interrupt();
+            //throw new RuntimeException(e);
         }
     }
 
@@ -11,7 +12,8 @@ public class SleepThread {
         try {
             Thread.sleep(sec * 1000);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            Thread.currentThread().interrupt();
+            //throw new RuntimeException(e);
         }
     }
 
